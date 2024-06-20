@@ -22,6 +22,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -49,19 +55,68 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/otsu-1.jpeg)">
+ <!-- <div id="hero" class="hero route bg-video">
+    <video autoplay muted loop id="bgVideo">
+        <source src="assets/video/video-1.mp4" type="video/mp4">
+       
+        Your browser does not support the video tag.
+    </video>
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
-      <div class="table-cell">
-         <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Sohel Rana</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Full Stack Java Developer"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        <div class="table-cell">
+            <div class="container">
+                <h1 class="hero-title mb-4">I am Sohel Rana</h1>
+                <p class="hero-subtitle"><span class="typed" data-typed-items="Full Stack Java Developer"></span></p>
+              
+            </div>
         </div>
-      </div>
     </div>
-  </div><!-- End Hero Section -->
+</div>-->
+<div id="hero" class="hero route bg-video">
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+         <!-- Slide 1: Image Slide -->
+         <div class="swiper-slide">
+          <div class="bg-image" style="background-image: url('assets/img/otsu-1.jpeg');"></div>
+          <div class="overlay-itro"></div>
+          <div class="hero-content display-table">
+              <div class="table-cell">
+                  <div class="container">
+                      <h1 class="hero-title mb-4">I am Sohel Rana</h1>
+                      <p class="hero-subtitle"><span class="typed" data-typed-items="Full Stack Java Developer"></span></p>
+                      <!-- Add any other content or buttons here -->
+                  </div>
+              </div>
+          </div>
+      </div>
+          <!-- Slide 2: Video Slide -->
+          <div class="swiper-slide">
+              <video autoplay muted loop id="bgVideo">
+                  <source src="assets/video/video-1.mp4" type="video/mp4">
+                  <!-- Add additional sources for other formats like WebM or OGG if needed -->
+                  Your browser does not support the video tag.
+              </video>
+              <div class="overlay-itro"></div>
+              <div class="hero-content display-table">
+                
+              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-image" style="background-image: url('assets/img/nara-tour.jpeg');"></div>
+            <div class="overlay-itro"></div>
+            <div class="hero-content display-table">
+                <div class="table-cell">
+                </div>
+            </div>
+        </div>
+          
+      </div>
+      <!-- Add pagination if needed -->
+      <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<!-- End Hero Section -->
 
   <main id="main">
 
@@ -475,6 +530,21 @@
         const d = new Date();
         document.getElementById("copy-year").innerHTML = d.getFullYear();
     </script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+          autoplay: {
+              delay: 5000, // Autoplay delay in milliseconds
+              disableOnInteraction: true // Disable autoplay on slide interaction
+          },
+          loop: true, // Enable loop mode
+          pagination: {
+              el: '.swiper-pagination', // Pagination container
+              clickable: true // Enable clickable pagination bullets
+          }
+          
+      });
+  </script>
+  
 
 </body>
 
